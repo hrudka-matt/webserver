@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -22,9 +23,14 @@ function Login() {
     }
   };
 
-   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white shadow-lg rounded-2xl p-8 w-[400px] h-[400px] flex flex-col justify-center">
+ return (
+    <div className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200">
+      <motion.div
+        className="bg-white shadow-xl rounded-2xl p-8 w-[400px] h-[400px] flex flex-col justify-center"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <div className="text-center mb-6">
           <img
             src="https://cdn.prod.website-files.com/67dfbed9526c7e965f07671f/67dfc9812bd4fd1598a7268c_Propela%20logo%20white.svg"
@@ -53,7 +59,7 @@ function Login() {
         >
           Login
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }
