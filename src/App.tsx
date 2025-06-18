@@ -5,6 +5,7 @@ type Book = {
   id: number;
   title: string;
   price: string;
+  ref: string; 
 };
 
 function App() {
@@ -48,7 +49,10 @@ return (
               key={book.id}
               className="bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center"
             >
-              <div className="w-32 h-48 bg-gray-700 rounded mb-4 animate-pulse" />
+              <div className="w-32 h-48 bg-gray-700 rounded mb-4">
+                <img src={book.ref} alt={book.title} className="w-full h-full object-cover rounded" />
+              </div>
+
               <h2 className="text-xl font-semibold text-white mb-2">{book.title}</h2>
               <p className="text-gray-400">{book.price}</p>
             </div>
