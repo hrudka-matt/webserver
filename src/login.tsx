@@ -24,44 +24,44 @@ function Login() {
   };
 
  return (
-    <div className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200">
-      <motion.div
-        className="bg-white shadow-xl rounded-2xl p-8 w-[400px] h-[400px] flex flex-col justify-center"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <div className="text-center mb-6">
-          <img
-            src="https://cdn.prod.website-files.com/67dfbed9526c7e965f07671f/67dfc9812bd4fd1598a7268c_Propela%20logo%20white.svg"
-            alt="Company Logo"
-            className="mx-auto h-12 mb-2"
-          />
-          <h2 className="text-2xl font-semibold">Login</h2>
-        </div>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="mb-6 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <button
-          onClick={login}
-          className="bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
-        >
-          Login
-        </button>
-      </motion.div>
+<div className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
+  <motion.div
+    className="bg-gray-900 shadow-2xl rounded-2xl p-8 w-[400px] h-[400px] flex flex-col justify-center border border-gray-700"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+  >
+    <div className="text-center mb-6">
+      <img
+        src="https://cdn.prod.website-files.com/67dfbed9526c7e965f07671f/67dfc9812bd4fd1598a7268c_Propela%20logo%20white.svg"
+        alt="Company Logo"
+        className="mx-auto h-12 mb-2"
+      />
+      <h2 className="text-2xl font-semibold text-white">Login</h2>
     </div>
-  );
+    <input
+      type="text"
+      placeholder="Username"
+      value={username}
+      onChange={(e) => setUsername(e.target.value)}
+      className="mb-4 px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      className="mb-6 px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    <button
+      onClick={login}
+      className="bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+    >
+      Login
+    </button>
+  </motion.div>
+</div>
+ )
 }
 
 export default Login;
